@@ -1,0 +1,192 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.container {
+    position: relative;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.input-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+#urlInput {
+    width: 100%;
+    padding: 10px;
+    padding-right: 40px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#pasteIcon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #090909;
+    color: white;
+    padding: 5px 10px 20px 10;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 5px;
+    box-sizing: border-box;
+    text-align: center;
+    justify-content: center;
+}
+
+#changeapi:hover, #databtn:hover, #openBtn:hover, #copyBtn:hover, #submitBtn:hover {
+    border: 2px solid #312424;
+    background-color: rgba(255, 255, 255, 0);
+    color: #000;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: none;
+}
+
+#resultContainer {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+#copyBtn, #openBtn, #historyIcon {
+    display: block;
+    position: absolute;
+    bottom: 10px; 
+    width: 40%;
+    height: 30px; 
+}
+
+#copyBtn {
+    left: 20px; 
+}
+#openBtn{
+ right: 20px;
+}
+
+#historyIcon {
+    right: -40px;
+    top: 20px;
+}
+
+#historyIcon:hover {
+    color: #1B01FF;
+}
+
+        #popupWindow {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            height: 80vh;
+            background-color: #fff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            z-index: 1000;
+        }
+
+        #popupClose {
+            float: right;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+
+
+        #submitBtn {
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+#historyContent {
+    padding: 5px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    margin: 20px auto;
+    height: 70vh; 
+    box-sizing: border-box; 
+    overflow-y: auto; 
+}
+
+#historyContent p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #0258E2;
+    display: flex;
+    justify-content: space-between;
+    align-items: centre;
+    margin: 10px 0;
+    gap: 5px;
+}
+#historyContent p button {
+    width: 10px;
+    padding: 5px 10px;
+    font-size: 14px;
+    color: #000;
+    background-color: rgba(255, 255, 255, 0); 
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+#result {
+    font-weight: bold;
+    font-style: italic;
+}
+.historyspan {
+margin-right: auto;
+margin-left: 10px;
+}
