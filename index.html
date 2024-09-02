@@ -40,22 +40,6 @@
             <button type="button" id="xyz-open-btn">Open URL</button>
         </form>
         </div>
-            <img src="Upload.gif" alt="Loading..." class="loading-gif" style="display: none;">
 <script src="script.js"></script>
-    <script>
-        document.getElementById('xyz-url-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    alert('URL submitted!');
-});
-
-document.getElementById('xyz-open-btn').addEventListener('click', function() {
-    const url = document.getElementById('xyz-url-input').value;
-    if (url) {
-        window.open(url, '_blank');
-    } else {
-        alert('Please enter a URL.');
-    }
-});
-    </script>
 </body>
 </html>
