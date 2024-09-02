@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+<i id="historyIcon" class="fa-solid fa-database"></i>
+
+        <h1>Smart URL Shortener</h1>
+        <div class="input-wrapper">
+            <input type="text" id="urlInput" placeholder="Enter URL" required>
+            <i id="pasteIcon" class="fas fa-paste"></i>
+        </div>
+        <input type="text" id="aliasInput" placeholder="Enter Custom Alias (optional)">
+        
+
+        <button id="submitBtn">Shorten URL</button>
+        <div id="resultContainer">
+            <textarea id="result" rows="2" readonly placeholder="result" disabled></textarea>
+            <button id="copyBtn" style="display:none;">Copy</button>
+            <button id="openBtn" style="display:none;">Open</button>
+        </div>
+    </div>
+       <!-- Popup Window -->
+    <div id="popupWindow">
+        <span id="popupClose">&times;</span>
+        <h2>History</h2>
+        <div id="historyContent"></div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
