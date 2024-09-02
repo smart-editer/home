@@ -190,3 +190,35 @@ textarea {
 margin-right: auto;
 margin-left: 10px;
 }
+
+        .xyz-container {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="url"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 300px;
+}
+
+#xyz-submit-btn, #xyz-open-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #007bff;
+    cursor: pointer;
+    margin: 5px;
+}
+
+#xyz-submit-btn:hover, #xyz-open-btn {
+    background-color: #0056b3;
+}
