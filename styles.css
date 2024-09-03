@@ -95,7 +95,7 @@ textarea {
     align-items: center; 
 }
 
-#copyBtn, #openBtn, #historyIcon {
+#copyBtn, #openBtn {
     display: block;
     position: absolute;
     bottom: 10px; 
@@ -114,11 +114,6 @@ textarea {
     right: -40px;
     top: 20px;
 }
-
-#historyIcon:hover {
-    color: #1B01FF;
-}
-*/
         #popupWindow {
             display: none;
             position: fixed;
@@ -185,10 +180,6 @@ textarea {
 #result {
     font-weight: bold;
     font-style: italic;
-}
-.historyspan {
-margin-right: auto;
-margin-left: 10px;
 }
 #browsericon{
   position: absolute;
