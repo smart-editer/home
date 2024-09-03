@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div class="container">
 <i id="historyIcon" class="fa-solid fa-database"></i>
 <i id="browsericon" class="fa-solid fa-info"></i>
+
+
+        <h1>Smart URL Shortener</h1>
         <div class="input-wrapper">
             <input type="text" id="urlInput" placeholder="Enter URL" required>
             <i id="pasteIcon" class="fas fa-paste"></i>
@@ -30,8 +33,7 @@
         <h2>History</h2>
         <div id="historyContent"></div>
     </div>
-     </div>
-
+    
     <!-- Popup Window -->
 <div id="popupWindowlink">
 <span id="popupCloselink">&times;</span>
@@ -44,20 +46,12 @@
 </div>
 </div>
 <script defer='defer' type="text/JavaScript">
-// Function to toggle the popup window
 function togglePopup() {
     const popup = document.getElementById('popupWindowlink');
-    popup.style.display = popup.style.display === 'block' ? 'none' : 'block';
-}
+    popup.style.display = popup.style.display === 'block' ? 'none' : 'block';}
 document.getElementById('browsericon').addEventListener('click', togglePopup);
-
-// Close popup on close icon click
 document.getElementById('popupCloselink').addEventListener('click', togglePopup);
-
-
-// function to toggle the link redirect 
 const linkIds = ['link-google', 'link-brave', 'link-instagram', 'link-youtube', 'link-facebook'];
-
 const targetUrls = {
   'link-google': 'https://www.google.com',
   'link-brave': 'https://search.brave.com/',
@@ -65,7 +59,6 @@ const targetUrls = {
   'link-youtube': 'https://www.youtube.com',
   'link-facebook': 'https://www.facebook.com'
 };
-
 linkIds.forEach(linkId => {
   document.getElementById(linkId).addEventListener('click', function() {
     window.location.href = targetUrls[linkId];
