@@ -10,6 +10,7 @@
 <body>
     <div class="container">
 <i id="historyIcon" class="fa-solid fa-database"></i>
+<i id="browsericon" class="fa-solid fa-mobile"></i>
 
         <h1>Smart URL Shortener</h1>
         <div class="input-wrapper">
@@ -32,9 +33,158 @@
         <h2>History</h2>
         <div id="historyContent"></div>
     </div>
+     </div>
 
-       
-        </div>
+    <!-- Popup Window -->
+<div id="popupWindowlink">
+<span id="popupCloselink">&times;</span>
+<div id="link-tools">
+<i id="link-google" class="fab fa-google "></i>
+<i id="link-brave" class="fa-brands fa-chrome"></i>
+<i id="link-instagram" class="fa-brands fa-instagram"></i>
+<i id="link-facebook" class="fa-brands fa-facebook"></i>
+<i id="link-youtube" class="fa-brands fa-youtube"></i>
+</div>
+</div>
+<script defer='defer' type="text/JavaScript">
+// Function to toggle the popup window
+function togglePopup() {
+    const popup = document.getElementById('popupWindowlink');
+    popup.style.display = popup.style.display === 'block' ? 'none' : 'block';
+}
+document.getElementById('browsericon').addEventListener('click', togglePopup);
+
+// Close popup on close icon click
+document.getElementById('popupCloselink').addEventListener('click', togglePopup);
+
+
+// function to toggle the link redirect 
+const linkIds = ['link-google', 'link-brave', 'link-instagram', 'link-youtube', 'link-facebook'];
+
+const targetUrls = {
+  'link-google': 'https://www.google.com',
+  'link-brave': 'https://search.brave.com/',
+  'link-instagram': 'https://www.instagram.com',
+  'link-youtube': 'https://www.youtube.com',
+  'link-facebook': 'https://www.facebook.com'
+};
+
+linkIds.forEach(linkId => {
+  document.getElementById(linkId).addEventListener('click', function() {
+    window.location.href = targetUrls[linkId];
+  });
+});
+
+const css = `
+  #link-google,
+  #link-brave,
+  #link-instagram,
+  #link-youtube,
+  #link-facebook {
+    padding: 0.8em;
+    outline: none;
+    border: none;
+    border-radius: 10%;
+    background: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+      rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+
+  #link-google {
+    color: #03A9F4;
+    background-color: #038EFF00;
+  }
+  #link-brave {
+    color: #69631F;
+    background-color: #C8CA1500;
+  }
+  #link-instagram {
+    color: #D37878;
+    background-color: #A1929200;
+  }
+  #link-youtube {
+    color: #F40303;
+    background-color: #FF030300;
+  }
+  #link-facebook {
+    color: #0C00FF;
+    background-color: #4803FF00;
+  }
+  #link-google:hover {
+    background-color: #03A9F4;
+    color: #fff;
+  }
+  #link-brave:hover {
+    background-color: #69631F;
+    color: #fff;
+  }
+  #link-instagram:hover {
+    background-color: #D37878;
+    color: #fff;
+  }
+  #link-youtube:hover {
+    background-color: #FF0303;
+    color: #fff;
+  }
+  #link-facebook:hover {
+    background-color: #4803FF;
+    color: #fff;
+  }
+  #popupWindowlink {
+    display: none;
+    position: fixed;
+    top: 7%;
+    left: 50%;
+    transform: translate(-50%, -50%) translateY(-100vh);
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 80%;
+    height: 80px;
+    overflow-y: auto;
+    box-sizing: border-box;
+    animation: slideDown 0.5s ease-out forwards;
+  }
+  #popupCloselink {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #333;
+    padding: 3px 9px;
+    border-radius: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  }
+  #popupCloselink:hover {
+    color: #007BFF;
+    background-color: #DF037D;
+  }
+  @keyframes slideDown {
+    0% {
+      transform: translate(-50%, -50%) translateY(-100vh);
+      opacity: 0;
+    }
+    100% {
+      transform: translate(-50%, -50%) translateY(0);
+      opacity: 1;
+    }
+  }
+`;
+
+// Create a style element
+const styleSheet = document.createElement("style");
+styleSheet.type = "text/css";
+styleSheet.innerText = css;
+
+// Append the style element to the head of the document
+document.head.appendChild(styleSheet);
+</script>
 <script src="script.js"></script>
 </body>
 </html>
