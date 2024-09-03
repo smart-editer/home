@@ -190,3 +190,21 @@ textarea {
 margin-right: auto;
 margin-left: 10px;
 }
+#browsericon{
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 5px 10px;
+  border-radius: 100%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  color: #6D3594;
+}
+#historyIcon{
+  position: absolute;
+  top: 15px;
+  right:  20px;
+  padding: 8px 10px;
+  border-radius: 100%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  color: #E6393B;
+}
