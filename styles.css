@@ -109,7 +109,7 @@ textarea {
 #openBtn{
  right: 20px;
 }
-
+/*
 #historyIcon {
     right: -40px;
     top: 20px;
@@ -118,7 +118,7 @@ textarea {
 #historyIcon:hover {
     color: #1B01FF;
 }
-
+*/
         #popupWindow {
             display: none;
             position: fixed;
