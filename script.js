@@ -30,9 +30,9 @@ document.getElementById('submitBtn').addEventListener('click', function () {
         alias = generateAlias();
         document.getElementById('aliasInput').value = alias;
     }
-    const apiToken = '562e2ed01f11e56b2aa8c32c3f0adc9beab5e982';
+    const apiToken = '59769c498fb2773a9bf456fcaf1dbc896508db27'; // New API token
     const encodedUrl = encodeURIComponent(url);
-    const apiUrl = `https://shrinkforearn.in/api?api=${apiToken}&url=${encodedUrl}&alias=${alias}`;
+    const apiUrl = `https://api.gplinks.com/api?api=${apiToken}&url=${encodedUrl}&alias=${alias}`;
 
    
     fetch(apiUrl)
@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const url = urlInput.value.trim();
             const alias = aliasInput.value.trim();
             if (url && alias) {
-                    const shortenedUrl = `https://shrinkforearn.xyz/${alias}`;
+                    const shortenedUrl = `https://gplinks.co/${alias}`;
                     result.textContent = shortenedUrl;
                     saveToHistory(shortenedUrl);
                     urlInput.value = '';
